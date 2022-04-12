@@ -1,0 +1,142 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html:focus-within {
+  scroll-behavior: smooth;
+}
+html, body {
+  height: 100%;
+}
+body {
+  line-height: calc(2px + 2ex + 2px);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeSpeed;
+}
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+a:not([class]) {
+  -webkit-text-decoration-skip-ink: all;
+          text-decoration-skip-ink: all;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/* Using below when you use framework */
+/* #root, #__next {
+  isolation: isolate;
+} */
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+.page {
+  background-image: url(./images/background.jpeg) ,linear-gradient(#ffc600, 10%,#193549);
+  background-blend-mode: darken;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+}
+.page__inner {
+  width: calc(100% - 2rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(3rem, 3rem + 3.5vw, 6rem);
+  margin: auto;
+  text-align: center;
+}
+.page__heading-wrapper {
+  background-color: rgba(0,0,0,0.5);
+  width: fit-content;
+  padding: 1rem;
+  border: 10px dashed #ffc600;
+  border-radius: 20px;
+}
+.page__heading {
+  line-height: 1.5;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  color: hsla(0, 100%, 100%, 0.75);
+}
+.page__heading_strong {
+  text-transform: uppercase;
+}
+.keys {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+.key {
+  border: .4rem solid #000000;
+  border-radius: .5rem;
+  font-size: clamp(.75rem, .75rem + 0.6vw, 1.25rem);
+  padding-block: 1rem;
+  width: clamp(5rem, 35%, 7.5rem);
+  color: white;
+  background: hsla(0, 0%, 0%, 0.5);
+  text-shadow: 0 0 .5rem black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-transform: uppercase;
+  opacity: 1;
+  transition: transform .07s ease, opacity .07s ease, border-color .07s ease, background-color .07s ease;
+  cursor: pointer;
+}
+.key:is(:hover, :focus-visible) {
+  outline: none;
+  background: rgba(255, 198, 0, 0.4);
+}
+.key__name {
+  font-size: clamp(1.5rem, 1.5rem + 0.6vw, 2rem);
+}
+.playing {
+  transform: scale(1.1);
+  border-color: #ffc600;
+  box-shadow: 0 0 1rem 0 #ffc600;
+  opacity: 0;
+  text-shadow: 0 0 .5rem #ffc600;
+  background-color: rgba(255, 198, 0, 0.4)
+}
+.key.playing {
+  opacity: 1;
+}
+.info {
+  display: none;
+}
