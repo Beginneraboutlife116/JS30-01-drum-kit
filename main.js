@@ -1,4 +1,24 @@
 const keys = document.querySelectorAll('.key')
+const infoDialog = document.querySelector('.info-dialog')
+const openDialog = document.querySelector('.open-dialog')
+const closeDialog = document.querySelector('.info-dialog__close-button')
+
+// * 處理提供資訊的modal
+let focusElementIndex = -1
+infoDialog.showModal()
+openDialog.addEventListener('click', () => {
+  infoDialog.showModal()
+})
+closeDialog.addEventListener('click', () => {
+  infoDialog.close()
+})
+// * 用以歸還focus狀態到key上
+infoDialog.addEventListener('close', () => {
+  if (focusElementIndex !== -1) {
+    keys[focusElementIndex].focus()
+    focusElementIndex = -1
+  }
+})
 
 // * 播放音樂
 function playSound(key) {
@@ -27,7 +47,16 @@ window.addEventListener('keydown', (event) => {
   playSound(key)
 })
 
+
 keys.forEach((key, index) => {
+
+  // * 當玩家在focus狀態下開啟introduction的時候，focus被移出的暫存
+  key.addEventListener('focusout', event => {
+    console.log(event.target)
+    console.log(infoDialog.open, 'focus out')
+    focusElementIndex = index
+    console.log(focusElementIndex)
+  })
 
   // * 用滑鼠點擊，或者是當button被focus的時候，可以使用enter、space
   key.addEventListener('click', event => {
@@ -48,9 +77,9 @@ keys.forEach((key, index) => {
       arrowUpAndArrowLeft(index)
       return
     }
-    if (keyCode === 'Escape') {
-      key.blur()
-    }
+    // if (keyCode === 'Escape') {
+    //   key.blur()
+    // }
   })
 
   // * 將.playing樣式取消掉

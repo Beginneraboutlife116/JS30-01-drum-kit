@@ -119,7 +119,7 @@ p, h1, h2, h3, h4, h5, h6 {
   transition: transform .07s ease, opacity .07s ease, border-color .07s ease, background-color .07s ease;
   cursor: pointer;
 }
-.key:is(:hover, :focus-visible) {
+.key:is(:hover, :focus-visible, :focus) {
   outline: none;
   background: rgba(255, 198, 0, 0.4);
 }
@@ -136,7 +136,4 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 .key.playing {
   opacity: 1;
-}
-.info {
-  display: none;
 }
