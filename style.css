@@ -142,7 +142,7 @@ p, h1, h2, h3, h4, h5, h6 {
   padding: 0;
   inset: 50%;
   transform: translate(-50%, -50%);
-  width: min(100%, 60ch);
+  width: min(100% - 1rem, 60ch);
   border-radius: 20px;
   text-align: left;
   background-color: hsl(0, 0%, 30%);

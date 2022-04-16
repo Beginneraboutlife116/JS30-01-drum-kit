@@ -16,9 +16,6 @@ closeDialog.addEventListener('click', () => {
     focusElementIndex = -1
   }
 })
-// * 用以歸還focus狀態到key上
-// introDialog.addEventListener('close', () => {
-// })
 
 // * 播放音樂
 function playSound(key) {
