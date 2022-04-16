@@ -59,7 +59,7 @@ p, h1, h2, h3, h4, h5, h6 {
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto+Mono:wght@400;700&display=swap');
 
 .page {
   background-image: url(./images/background.jpeg) ,linear-gradient(#ffc600, 10%,#193549);
@@ -67,6 +67,7 @@ p, h1, h2, h3, h4, h5, h6 {
   background-position: center;
   background-size: cover;
   display: flex;
+  position: relative;
 }
 .page__inner {
   width: calc(100% - 2rem);
@@ -136,4 +137,80 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 .key.playing {
   opacity: 1;
+}
+.intro-dialog {
+  padding: 0;
+  inset: 50%;
+  transform: translate(-50%, -50%);
+  width: min(100%, 60ch);
+  border-radius: 20px;
+  text-align: left;
+  background-color: hsl(0, 0%, 30%);
+  color: hsl(0, 0%, 90%);
+  border: none;
+  box-shadow: 0 0 10px 0 #193549;
+  font-family: 'Roboto Mono', monospace;
+}
+.intro-dialog::backdrop {
+  background-color: hsla(0, 50%, 0%, 0.5);
+}
+.intro-dialog__header {
+  padding: 1.5rem 1.5rem 1rem;
+  background-color: hsl(0, 0%, 45%);
+  font-family: 'Montserrat', sans-serif;
+}
+.intro {
+  padding: 1rem;
+  font-size: 1rem;
+}
+.intro__inner-item {
+  margin-bottom: 1rem;
+}
+.intro-dialog__footer {
+  padding: 1rem 1.5rem;
+  background-color: hsl(0, 0%, 45%);
+  text-align: right;
+}
+.intro-dialog__close-button {
+  outline: none;
+  border: none;
+  padding: .5rem 1rem;
+  border-radius: 99em;
+  cursor: pointer;
+}
+.intro-dialog__close-button:hover {
+  background-color: #ffc600;
+}
+.open-dialog {
+  position: absolute;
+  inset: auto 5% 5% auto;
+  width: max(5%, 2.5rem);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: none;
+  background-color: hsl(0, 100%, 50%);
+  box-shadow: inset -10px -10px 5px 0 hsla(0, 50%, 50%);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2.5rem;
+}
+.open-dialog:hover > span {
+  animation: question-jump 1s ease 0s infinite;
+}
+@keyframes question-jump {
+  20% {
+    transform: translateY(-100%);
+  }
+  40% {
+    transform: translateY(0);
+  }
+  60% {
+    transform: translateY(-50%);
+  }
+  80% {
+    transform: translateY(0);
+  }
 }

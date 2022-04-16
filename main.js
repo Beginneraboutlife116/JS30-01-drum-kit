@@ -11,14 +11,14 @@ openDialog.addEventListener('click', () => {
 })
 closeDialog.addEventListener('click', () => {
   introDialog.close()
-})
-// * 用以歸還focus狀態到key上
-introDialog.addEventListener('close', () => {
   if (focusElementIndex !== -1) {
     keys[focusElementIndex].focus()
     focusElementIndex = -1
   }
 })
+// * 用以歸還focus狀態到key上
+// introDialog.addEventListener('close', () => {
+// })
 
 // * 播放音樂
 function playSound(key) {
