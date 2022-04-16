@@ -19,7 +19,9 @@ This is my solution for JS30 day one challenge!
 
 Users should be able to:
 
-- Use the correspond keyboard key to make the correspond sound
+- Use the correspond keyboard key to make correspond sound.
+- Use the arrowKey to go forward or backward the keys and press space or enter to make correspond sound.
+- click the introduction button to know the rules and manipulation.
 
 ### Screenshot
 
