@@ -181,6 +181,9 @@ p, h1, h2, h3, h4, h5, h6 {
 .intro-dialog__close-button:hover {
   background-color: #ffc600;
 }
+.emoji {
+  font-size: 1.5rem;
+}
 .open-dialog {
   position: absolute;
   inset: auto 5% 5% auto;
