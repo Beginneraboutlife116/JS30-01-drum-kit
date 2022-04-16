@@ -71,9 +71,6 @@ keys.forEach((key, index) => {
       arrowUpAndArrowLeft(index)
       return
     }
-    // if (keyCode === 'Escape') {
-    //   key.blur()
-    // }
   })
 
   // * 將.playing樣式取消掉
