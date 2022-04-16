@@ -63,25 +63,23 @@
           <audio preload="auto" src="./sounds/tink.wav"></audio>
         </button>
       </section>
-      <button class="open-dialog">information</button>
-      <dialog class="info-dialog" aria-labelledby="game-introduction">
-        <header class="info-dialog__header">
-          <h2 class="info-dialog__title" id="game-introduction">
-            Welcome! This is a drum kit game.
+      <button class="open-dialog">introduction</button>
+      <dialog class="intro-dialog" aria-labelledby="game-introduction">
+        <header class="intro-dialog__header">
+          <h2 class="intro-dialog__title" id="game-introduction">
+            Welcome! Here are some tips!
           </h2>
         </header>
-        <section class="info">
-          <p class="info__text">
-            You could just press the correspond keyboard to make sound. You
-            could also use the <kbd>箭頭上</kbd>、<kbd>箭頭右</kbd> to select
-            the forward key or use the <kbd>箭頭下</kbd>、<kbd>箭頭左</kbd> to
-            select the backward key, and after that using <kbd>Space</kbd> or
-            <kbd>Enter</kbd> to click and make sound. Just feel free to test it
-            &#128521;
-          </p>
+        <section class="intro">
+          <pre class="intro__text">
+            1. You could just press the correspond keyboard to make sound.
+            2. Once you are focus in any key. You could also use the <kbd>箭頭上</kbd>、<kbd>箭頭右</kbd> to select the forward key or use the <kbd>箭頭下</kbd>、<kbd>箭頭左</kbd> to
+            select the backward key, and after that using <kbd>Space</kbd> or <kbd>Enter</kbd> to click and make sound.
+            Just feel free to test it &#128521;
+          </pre>
         </section>
-        <footer class="info-dialog__footer">
-          <button class="info-dialog__close-button" aria-label="dialog-close">
+        <footer class="intro-dialog__footer">
+          <button class="intro-dialog__close-button" aria-label="dialog-close">
             Close
           </button>
         </footer>

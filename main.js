@@ -1,19 +1,19 @@
 const keys = document.querySelectorAll('.key')
-const infoDialog = document.querySelector('.info-dialog')
+const introDialog = document.querySelector('.intro-dialog')
 const openDialog = document.querySelector('.open-dialog')
-const closeDialog = document.querySelector('.info-dialog__close-button')
+const closeDialog = document.querySelector('.intro-dialog__close-button')
 
 // * 處理提供資訊的modal
 let focusElementIndex = -1
-infoDialog.showModal()
+introDialog.showModal()
 openDialog.addEventListener('click', () => {
-  infoDialog.showModal()
+  introDialog.showModal()
 })
 closeDialog.addEventListener('click', () => {
-  infoDialog.close()
+  introDialog.close()
 })
 // * 用以歸還focus狀態到key上
-infoDialog.addEventListener('close', () => {
+introDialog.addEventListener('close', () => {
   if (focusElementIndex !== -1) {
     keys[focusElementIndex].focus()
     focusElementIndex = -1
@@ -52,10 +52,7 @@ keys.forEach((key, index) => {
 
   // * 當玩家在focus狀態下開啟introduction的時候，focus被移出的暫存
   key.addEventListener('focusout', event => {
-    console.log(event.target)
-    console.log(infoDialog.open, 'focus out')
     focusElementIndex = index
-    console.log(focusElementIndex)
   })
 
   // * 用滑鼠點擊，或者是當button被focus的時候，可以使用enter、space
