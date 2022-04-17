@@ -28,8 +28,8 @@ Users should be able to:
 <img src="./image/../images/screenshot/desktop-initial.png" alt="desktop-initial">
 <img src="./image/../images/screenshot/desktop-play.png" alt="desktop-play">
 <figure style="display: flex;">
-  <img src="./images/screenshot/mobile-initial.png" alt="mobile-initial" style="width: 50%;">
-  <img src="./images/screenshot/mobile-play.png" alt="mobile-play" style="width: 50%;">
+  <img src="./images/screenshot/mobile-initial.png" alt="mobile-initial" style="width: 40%;">
+  <img src="./images/screenshot/mobile-play.png" alt="mobile-play" style="width: 40%;">
 </figure>
 
 ### Links
