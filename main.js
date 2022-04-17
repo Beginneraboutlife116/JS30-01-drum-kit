@@ -5,20 +5,24 @@ const closeDialog = document.querySelector('.intro-dialog__close-button')
 
 // * 處理提供資訊的modal
 let focusElementIndex = -1
+function focusKeyBack() {
+  if (focusElementIndex !== -1) {
+    keys[focusElementIndex].focus()
+    focusElementIndex = -1
+  }
+}
 introDialog.showModal()
 openDialog.addEventListener('click', () => {
   introDialog.showModal()
 })
 closeDialog.addEventListener('click', () => {
   introDialog.close()
-  if (focusElementIndex !== -1) {
-    keys[focusElementIndex].focus()
-    focusElementIndex = -1
-  }
+  focusKeyBack()
 })
 introDialog.addEventListener('click', event => {
   if (event.target === introDialog) {
     introDialog.close()
+    focusKeyBack()
   }
 })
 
