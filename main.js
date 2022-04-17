@@ -16,6 +16,11 @@ closeDialog.addEventListener('click', () => {
     focusElementIndex = -1
   }
 })
+introDialog.addEventListener('click', event => {
+  if (event.target === introDialog) {
+    introDialog.close()
+  }
+})
 
 // * 播放音樂
 function playSound(key) {

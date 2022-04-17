@@ -79,7 +79,7 @@ I have learned some basic knowledge about
      - [Html dialog spec](https://html.spec.whatwg.org/multipage/interactive-elements.html#the-dialog-element)
      - [In defence of dialog](https://whistlr.info/2021/in-defence-of-dialog/)
 3. Event reference
-    - I have use `keydown`, `click`, `focusout`, `keyup`, `transitionout` these events.
+    - I have use `keydown`, `click`, `focusout`, `keyup`, `transitionend` these events.
 4. `HTMLElement.focus()`, `HTMLElement.blur()`
     - These are for my keyboard play mode. Trying to trace the arrowKey.
     - By these, I could make sure that I have the right focus style on the right key.
